@@ -1,4 +1,4 @@
-"""Embedding generation using OpenAI."""
+
 
 from typing import List
 import numpy as np
@@ -8,7 +8,7 @@ from config import DEFAULT_EMBEDDING_MODEL
 
 
 class EmbeddingManager:
-    """Responsible for initializing and generating embeddings."""
+    
     
     def __init__(self, model_name: str = DEFAULT_EMBEDDING_MODEL):
         self.model_name = model_name
@@ -16,7 +16,7 @@ class EmbeddingManager:
         self._load_model()
     
     def _load_model(self):
-        """Load the embedding model."""
+   
         try:
             print(f"Loading embedding model: {self.model_name}")
             self.model = OpenAIEmbeddings(model=self.model_name)
@@ -26,7 +26,7 @@ class EmbeddingManager:
             raise
     
     def generate_embeddings(self, texts: List[str]) -> np.ndarray:
-        """Generate embeddings for a list of texts."""
+       
         try:
             print(f"Generating embeddings for {len(texts)} texts")
             embeddings = self.model.embed_documents(texts)
