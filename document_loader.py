@@ -1,4 +1,4 @@
-"""Document loading and text splitting utilities."""
+
 
 from typing import List
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -9,7 +9,7 @@ from config import PDF_DIRECTORY, CHUNK_SIZE, CHUNK_OVERLAP
 
 
 class DocumentLoader:
-    """Handles loading and splitting PDF documents."""
+   
     
     def __init__(
         self, 
